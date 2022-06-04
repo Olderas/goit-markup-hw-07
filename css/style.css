@@ -428,16 +428,17 @@ height: 600px;
     transform: translate(-50%, -50%) scale(1);
     transition: transform 250ms var(--timing-function),
         scale 250ms var(--timing-function);
-
+    border-radius: 4px;
     width: 528px;
     height: 581px;
-
+    padding: 40px;
     background-color: #fff;
     
 }
 
 
 .button-close {
+    display: flex;
     position: absolute;
     top: 0;
     right: 0;
@@ -445,14 +446,33 @@ height: 600px;
     height: 30px;
     margin-top: 8px;
     margin-right: 8px;
+    fill: black;
     border: none;
-    background-color: #ffffff00;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 50px;
+    background-color: white;
+    transition: fill 250ms var(--timing-function), border-color 250ms var(--timing-function) ;
+}
+
+.button-close:hover {
+    fill: #2196F3;
+    border-color: #2196F3;
 }
 
 .button-close svg {
     position: absolute;
-    bottom: 0;
-    left: 0;
+    top: 50%;
+    left: 30%;
+
+    transform: translateY(-50%);
+
+}
+
+.icon-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -464,12 +484,12 @@ background-color: var(--hover-button)
 
 .form-modal {
     display: block;
-width: 500px;
+
 height: 100%;
 /* outline: 1px solid tomato; */
 margin-left: auto;
 margin-right: auto;
-padding: 40px 20px 100px 20px;
+transform:;
 
 }
 
@@ -477,12 +497,13 @@ padding: 40px 20px 100px 20px;
 font-weight: 700;
 font-size: 20px;
 line-height: 1.15;
-    
+width: 448px;
+height: 23px;
 letter-spacing: 0.03em;
 color: #212121;
 text-align: center;
 letter-spacing: 0.03em;
-    margin: 0px 11px 12px 0px;
+margin-bottom: 30px;
     color: var(--title-text-color); 
 }
 
@@ -493,8 +514,20 @@ letter-spacing: 0.03em;
     display: flex;
     flex-direction: column;
     /* outline: 1px solid teal; */
-    margin-bottom: 28px;
+    margin-bottom: 20px;
 }
+
+.form-field:nth-child(4) {
+    margin-bottom: 10px;
+}
+
+
+
+
+
+/* .form-field:nth-child(-n + 3) {
+    margin-bottom: 15px;
+} */
 
 .form-comment {
     position: relative;
@@ -514,9 +547,15 @@ letter-spacing: 0.03em;
     position: absolute;
     top: 50%;
     left: 15px;
+    fill: var(--title-text-color);
     transform: translateY(-50%);
     transition: fill 250ms var(--timing-function);
 }
+
+.form-field:hover .icon-modal {
+fill: #2196F3;
+}
+
 
 
 /* MODAL 2 */
@@ -539,23 +578,23 @@ transform: translateY(-50px);
 
 
 /* Modal 1 Хороший ВАРИАНТ! */ 
-/* .form-input:focus~.icon-modal,
+.form-input:focus~.icon-modal,
 .form-input:hover~.icon-modal {
     fill: var(--accent-color);
 }
 
 
 .form-input:focus + .form-label, .form-input:not(:placeholder-shown) + .form-label {
-    transform: translateY(-32px);
+    transform: translateY(-40px);
 }
 
 .form-input:placeholder-shown {
     background-color: white;
-} */
+}
 
 
 /* MODAL 3 в процессе без ID и bez LABEL */
-
+/* 
 .form-field:focus-within > .icon-modal {
     fill: rgb(14, 161, 230);
 }
@@ -565,9 +604,10 @@ transform: translateY(-50px);
     transform: translateY(-210%);
 }
 
+
 .form-input:not(:placeholder-shown) + .form-label {
 transform: translateY(-35px);
-}
+} */
 
 .chekbox {
 /*     
@@ -592,7 +632,7 @@ transform: translateY(-35px);
 
 .icon-chekbox {
     display: inline-block;
-    
+    cursor: pointer;
     width: 15px;
     height: 15px;
     border: 2px solid #2a2a2a;
@@ -600,21 +640,31 @@ transform: translateY(-35px);
     margin-right: 8px;
 }
 
+.icon-chekbox:focus,
+.icon-chekbox:hover {
+    border-color: #2196F3;
+}
+
 .links-checkbox {
-    font-size: 12px;
-    line-height: 1.2;
+
+    font-size: 14px;
+    line-height: 1.71;
+
     letter-spacing: 0.03em;
     color: #2196F3;
     margin-left: 3px;
     text-decoration: underline;
 }
 
-.label-footer {
+.span-modal{
+font-size: 14px;
+line-height: 1.71;
 color: #757575;;
-font-size: 12px;
-line-height: 1.2;
 letter-spacing: 0.03em;
 }
+
+
+
 
 .chekbox:checked + .icon-chekbox {
     border-color: #2196F3;
@@ -635,7 +685,7 @@ letter-spacing: 0.03em;
     position: absolute;
     top: 54%;
     left: 42px;
-    width: 100%;
+    
     transform: translateY(-50%);
     transition: transform 250ms var(--timing-function);
 }
@@ -644,6 +694,7 @@ letter-spacing: 0.03em;
     width: 448px;
     height: 40px;
     margin: 0;
+    cursor: pointer;
     padding-left: 42px;
     border-radius: 4px;
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -651,14 +702,16 @@ letter-spacing: 0.03em;
     outline: none;
 }
 
+.form-field input:hover,
+.form-field input:focus {
+    border-color: #2196F3;
+}
+
 .form-field input[type="checkbox"] {
     width: 16px;
     height: 15px;
 }
 
-.form-field input:focus {
-    border-color: rgb(14, 161, 230);
-}
 
 /* .form-field:focus-within>.form-input {
    color: rgb(14, 161, 230);
@@ -671,6 +724,7 @@ textarea {
     padding-right: 16px;
     padding-bottom: 12px ;
     padding-top: 12px ;
+    cursor: pointer;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     transition: border-color 250ms var(--timing-function);
@@ -680,35 +734,43 @@ textarea {
 
 .title-comment {
     margin-bottom: 4px;
+    margin-top: 10px;
 }
 
+.form-comment textarea:hover,
 .form-comment textarea:focus {
-    border-color: rgb(14, 161, 230);
+    border-color: #2196F3;
 }
 
 .button-modal {
-    position: absolute;
+/* position: absolute;
 bottom: 40px;
- left: 50%;
-transform: translateX(-50%);
+left: 50%;
+transform: translateX(-50%); */
+margin-left: 25%;
+margin-top: 30px;
 color: var(--primari-white-color);
 background-color: var(--accent-color);
 font-weight: 700;
 font-size: 16px;
 line-height: 1.88;
 letter-spacing: 0.06em;
+cursor: pointer;
 border: none;
 border-radius: 4px;
-transition: box-shadow 250ms var(--timing-function);
+transition: box-shadow 250ms var(--timing-function), background-color 250ms var(--timing-function);
 width: 200px;
 height: 50px;
 
 }
 
+.button-modal:hover,
 .button-modal:focus {
 outline: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    background-color: var(--hover-button);
 }
+
 
 .form-field input::placeholder {
     color: #C4C4C4;
@@ -987,6 +1049,7 @@ margin-bottom: 16px;
 margin-right: 10px;
 }
 
+/* 11 УБРАЛ ФИЛЛ С socials-links ОСТАВИЛ ФОН И ДОБАВИЛ ФИЛЛ НА SVG!   */
 .socials-links {
 display: inline-flex;
 align-items: center;
@@ -994,9 +1057,27 @@ justify-content: center;
 width: 44px;
 height: 44px;
 border-radius: 50px;
-fill: #AFB1B8;;
+/* fill: #AFB1B8; */
 transition: background-color 250ms var(--timing-function);
 }
+
+.socials-links:hover,
+.socials-links:focus {
+    /* fill: white; */
+    background-color: #188ce8;
+}
+
+
+.socials-links:hover svg {
+    fill: white;
+}
+
+.socials-icon {
+    fill: var(--var--bg-icon);
+    transition:  fill 250ms var(--timing-function);
+    
+}
+/* 11 */
 
 .socials-list {
 display: flex;
@@ -1011,11 +1092,6 @@ margin: 0;
 
 }
 
-.socials-links:hover,
-.socials-links:focus {
-    fill: white;
-    background-color: #188ce8;
-}
 
 
 /* PORTFOLIO */
@@ -1422,9 +1498,9 @@ fill 250ms var(--timing-function);
 
 
 .form-footer {
+    display: flex;
     margin-left: 93px;
-    width: 570px;
-    height: 86px;
+
 }
 
 .footer-span {
@@ -1449,7 +1525,8 @@ outline: none;
 transition: border-color 250ms var(--timing-function);
 }
 
-.footer-input:focus {
+.footer-input:focus,
+.footer-input:hover {
     border-color: #2196F3;
 }
 
@@ -1465,6 +1542,7 @@ line-height: 1.2;
 letter-spacing: 0.03em;
 text-transform: uppercase;
 color: #FFFFFF;
+margin-left: 93px;
 }
 
 .footer-label input::placeholder {
@@ -1485,20 +1563,23 @@ color: rgba(255, 255, 255, 0.6);
 display: flex;
 align-items: center;
 justify-content: center;
-background: #2196F3;
+background: var(--accent-color);
 width: 200px;
 height: 50px;
-
+cursor: pointer;
 color: white;
 border: none;
 border-radius: 4px;
 margin-left: 20px;
-transition: box-shadow 250ms var(--timing-function);
+transition: box-shadow 250ms var(--timing-function), background-color 250ms var(--timing-function);
 }
 
+
+.button-footer:hover,
 .button-footer:focus {
      
      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+     background-color: var(--hover-button);
 }
 
 .footer-span {
@@ -1511,9 +1592,6 @@ letter-spacing: 0.06em;
     color: #FFFFFF;
 }
 
-.div {
-    display: flex;
-}
 
 
 
