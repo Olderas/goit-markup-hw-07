@@ -17,4 +17,21 @@
 
 // @include centeredFlex (inline-flex);
 
+
+
+// URL КАК ПРАВИЛЬНО ИКОНКИ ОФОРМЛЯТЬ ЧЕРЕЗ CSS
+$socialIcons: "Facebook", "instagram", "linkedin", "twitter";
+
+@mixin generateIcons($socialIcons) {
+  @each $iconName in $socialIcons {
+
+    .icon-#{iconName} {
+      background-image: url("../images/#{iconName}.svg")
+    }
+
+  }
+}
+
+@include generateIcons($socialIcons);
+
  

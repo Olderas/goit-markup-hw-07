@@ -1,14 +1,11 @@
 
 @import "./utils/variables";
-@import "./utils/visually-hidden";
-
+@import "./utils/visuallyhidden";
 @import "./base/normalize";
 @import "./components/page-headers";
 @import "./utils/placeholders";
 
-.features {
- @extend %list
-}
+
 
 
 
