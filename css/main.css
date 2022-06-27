@@ -1,3 +1,17 @@
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  margin: -1px;
+}
+
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 /*
 Document
@@ -261,8 +275,13 @@ summary {
   display: list-item;
 }
 
-.page-header {
-  background-color: white;
+body {
+  background-color: var(--primari-white-color);
+  color: var(--primari-text-color);
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
 }
 
 .list-best {
@@ -287,4 +306,18 @@ summary {
 }
 .hello:hover {
   color: red;
+}
+
+.page-header {
+  background-color: white;
+}
+
+ul {
+  list-style: none;
+}
+
+.features {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }/*# sourceMappingURL=main.css.map */

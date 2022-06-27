@@ -1,34 +1,14 @@
 
 @import "./utils/variables";
+@import "./utils/visually-hidden";
+
 @import "./base/normalize";
 @import "./components/page-headers";
+@import "./utils/placeholders";
 
-
-
-.list-best {
-    background-color: red;
-    
-    &:nth-child(5) {
-     background-color: $bg-color;
-     color:red;
-    }
+.features {
+ @extend %list
 }
 
-.list-best1 {
-    background-color: $text-color;
-    color: $bg-color;
-    width: 350px;
 
-    &:hover {
-     color: $bg-color;
-     }
-     
-}
 
-.hello{
-    color: black;
-
-     &:hover {
-         color: red;
-     }
-}
