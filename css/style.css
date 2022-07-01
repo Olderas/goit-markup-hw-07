@@ -70,6 +70,10 @@ ul {
 
 .header {
     border-bottom: 1px solid var(--border-box);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
 }
 
 .container.headers {
@@ -379,21 +383,25 @@ height: 600px;
 
 
 .button {
-    width: 200px;
-    height: 50px;
+    min-width: 200px;
+    
+    padding: 10px 32px;
     background-color: var(--accent-color);
     color: var(--primari-white-color);
-    display: inline-block;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.9;
     align-items: center;
+    justify-content: center;
     text-align: center;
     letter-spacing: 0.06em;
     cursor: pointer;
     border: none;
     border-radius: 3px;
-    transition: background-color 250ms var(--timing-function);
+    transition: box-shadow 250ms var(--timing-function), background-color 250ms var(--timing-function);
 }
 
 /* Modal window */
@@ -796,9 +804,31 @@ letter-spacing: 0.01em;
 color: #757575;
 }
 
+/* 
+        display: flex;
+        align-items: center;
+        color: #757575;
+        fill: #757575;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.02em;
+        transition: color 250ms var(--timing-function),
+        fill 250ms var(--timing-function);
 
-
-
+    position: relative;
+    color: var(--title-text-color);
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    transition: color 250ms var(--timing-function);
+ */
 
 
 /* section */
@@ -975,9 +1005,6 @@ background:#188ce8; */
 
 }
 
-/* .position-container:hover .position-list {
-    opacity: 1;
-} */
 
 
 
@@ -1000,6 +1027,7 @@ background:#188ce8; */
     margin-left: 30px;
 
 }
+
 
 .section--team {
     background-color: var(--button-filter);
@@ -1437,6 +1465,7 @@ text-transform: uppercase;
 .socials-footer__link {
 display: flex;
 align-items: center;
+justify-content: center;
 width: 44px;
 height: 44px;
 fill: var(--primari-white-color);

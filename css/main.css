@@ -315,4 +315,9 @@ ul {
 
 .icon-iconName {
   background-image: url("../images/iconName.svg");
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }/*# sourceMappingURL=main.css.map */
