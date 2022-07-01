@@ -404,6 +404,13 @@ height: 600px;
     transition: box-shadow 250ms var(--timing-function), background-color 250ms var(--timing-function);
 }
 
+.button:hover,
+.button:focus {
+    outline: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    background-color: var(--hover-button);
+}
+
 /* Modal window */
 .backdrop {
 
@@ -485,10 +492,7 @@ height: 600px;
 
 
 
-.button:hover,
-.button:focus{
-background-color: var(--hover-button)
-}
+
 
 .form-modal {
     display: block;
@@ -635,6 +639,7 @@ transform: translateY(-35px);
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 30px;
     
 }
 
@@ -750,34 +755,11 @@ textarea {
     border-color: #2196F3;
 }
 
-.button-modal {
-/* position: absolute;
-bottom: 40px;
-left: 50%;
-transform: translateX(-50%); */
-margin-left: 25%;
-margin-top: 30px;
-color: var(--primari-white-color);
-background-color: var(--accent-color);
-font-weight: 700;
-font-size: 16px;
-line-height: 1.88;
-letter-spacing: 0.06em;
-cursor: pointer;
-border: none;
-border-radius: 4px;
-transition: box-shadow 250ms var(--timing-function), background-color 250ms var(--timing-function);
-width: 200px;
-height: 50px;
 
-}
 
-.button-modal:hover,
-.button-modal:focus {
-outline: none;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    background-color: var(--hover-button);
-}
+
+
+
 
 
 .form-field input::placeholder {
@@ -1090,29 +1072,22 @@ margin-right: 10px;
 display: inline-flex;
 align-items: center;
 justify-content: center;
+fill: var(--var--bg-icon);
+background-color: var(--primari-white-color);
 width: 44px;
 height: 44px;
 border-radius: 50px;
 /* fill: #AFB1B8; */
-transition: background-color 250ms var(--timing-function);
+transition: background-color 250ms var(--timing-function), fill 250ms var(--timing-function);
 }
 
 .socials-links:hover,
 .socials-links:focus {
-    /* fill: white; */
-    background-color: #188ce8;
+    fill: var(--primari-white-color);
+    background-color: var(--accent-color);
 }
 
 
-.socials-links:hover svg {
-    fill: white;
-}
-
-.socials-icon {
-    fill: var(--var--bg-icon);
-    transition:  fill 250ms var(--timing-function);
-    
-}
 /* 11 */
 
 .socials-list {
@@ -1262,23 +1237,6 @@ box-shadow: 1px 4px 6px 0px #00000029, 0px 4px 4px 0px #0000000f, 0px 1px 1px 0p
 
 /* Фильтр */
 
-/* Нужно ли мне применять єтот код?? */
-
-/* .button {
-    color: var(--primari-white-color);
-    background-color: var(--accent-color);
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    letter-spacing: 0.06em;
-    cursor: pointer;
-    text-align: center;
-}
-
-.button:hover,
-.button:focus {
-    background-color: var(--hover-button);
-} */
 
 .section .item {
 
@@ -1533,9 +1491,7 @@ transition: border-color 250ms var(--timing-function);
     border-color: #2196F3;
 }
 
-.button-label {
 
-}
 
 .footer-title {
 margin-bottom: 20px;
@@ -1548,6 +1504,10 @@ color: #FFFFFF;
 margin-left: 93px;
 }
 
+.footer-label{
+margin-right: 12px;
+}
+
 .footer-label input::placeholder {
 
 /* padding-left: 16px; */
@@ -1556,34 +1516,14 @@ line-height: 1.2;
 
 letter-spacing: 0.03em;
 color: rgba(255, 255, 255, 0.6);
+
 }
 
 
 
 
 
-.button-footer {
-display: flex;
-align-items: center;
-justify-content: center;
-background: var(--accent-color);
-width: 200px;
-height: 50px;
-cursor: pointer;
-color: white;
-border: none;
-border-radius: 4px;
-margin-left: 20px;
-transition: box-shadow 250ms var(--timing-function), background-color 250ms var(--timing-function);
-}
 
-
-.button-footer:hover,
-.button-footer:focus {
-     
-     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-     background-color: var(--hover-button);
-}
 
 .footer-span {
 
