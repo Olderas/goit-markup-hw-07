@@ -947,13 +947,13 @@ margin: -1px;
 display: flex;
 }
 
-.position-container {
+/* .position-container {
     position: relative;
 
-}
+} */
 
 .flex-item {
-
+position: relative;
 width: 370px;
 }
 
