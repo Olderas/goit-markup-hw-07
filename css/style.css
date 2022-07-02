@@ -415,6 +415,7 @@ height: 600px;
 }
 
 /* Modal window */
+
 .backdrop {
 
     position: fixed;
@@ -567,7 +568,6 @@ color: var(--title-text-color);
 .form-field:hover .icon-modal {
 fill: #2196F3;
 }
-
 
 
 /* MODAL 2 */
@@ -892,7 +892,7 @@ margin-bottom: 30px;
     background-image: url("../images/icons.svg/astronautfull.svg");
 } */
 
-.section .title {
+.feature__title {
     color: var(--title-text-color);
     margin-top: 0;
     margin-bottom: 10px;
@@ -1053,7 +1053,7 @@ img {
     margin-bottom: 10px;
 }
 
-.feature-text {
+.feature__text {
 font-size: 14px;
 line-height: 1.71;
 letter-spacing: 0.03em;
