@@ -933,32 +933,23 @@ margin: -1px;
 .work-list {
 display: flex;
 
+flex-wrap: wrap;
 }
 
-.position-container {
 
-position: relative;
+.flex-item + .flex-item{
+    margin-left: 30px;
+}
+
+.flex-item {
+    position: relative;
 justify-content: center;
 align-items: center;
 width: 370px;
-
-} 
-
-/* .flex-item {
-flex-direction: column;
-position: relative;
-justify-content: center;
-align-items: center;
-width: 370px;
-} */
-
-/* .flex-item + .flex-item{
-    margin-left: 30px;
-} */
-
- .position-container:nth-child(+n + 2) {
-    margin-left: 30px;
+flex-basis: calc(100% / 4);
 }
+
+
 
 .position-list {
 display: flex;
