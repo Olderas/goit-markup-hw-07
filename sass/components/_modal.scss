@@ -45,7 +45,7 @@
     right: 8px;
     width: 30px;
     height: 30px;
-
+outline: none;
     fill: black;
     border: none;
     cursor: pointer;
@@ -55,7 +55,8 @@
     transition: fill 250ms var(--timing-function), border-color 250ms var(--timing-function);
 }
 
-.button-close:hover {
+.button-close:hover,
+.button-close:focus   {
     fill: #2196F3;
     border-color: #2196F3;
 }
