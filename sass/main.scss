@@ -2,7 +2,7 @@
 @import "./utils/variables";
 @import "./utils/visuallyhidden";
 @import "./utils/normalize";
-@import "./components/header";
+@import "./layout/header";
 @import "./utils/placeholders";
 @import "./utils/mixins";
 @import "./components/section";
@@ -11,15 +11,16 @@
 @import "./base/resetstyles";
 @import "./components/logo";
 @import "./components/socialList";
-@import "./components/navigation";
+@import "./layout/navigation";
 @import "./components/contant";
 @import "./components/button";
 @import "./components/modal";
-@import "./components/footer";
+@import "./layout/footer";
 @import "./components/feature";
 @import "./components/hero";
 @import "./components/work";
 @import "./components/team";
+@import "./components/client";
 
 
 
