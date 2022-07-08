@@ -1328,8 +1328,6 @@ textarea {
       -ms-flex-align: center;
           align-items: center;
   width: 370px;
-  -ms-flex-preferred-size: 25%;
-      flex-basis: 25%;
 }
 
 .work__text {
